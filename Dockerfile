@@ -1,5 +1,5 @@
 
-FROM smbzhang/gcc11-ubuntu16.04
+FROM smbzhang/gcc11-ubuntu16.04:latest
 
 RUN ps xf
 
