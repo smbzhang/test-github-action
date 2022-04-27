@@ -39,10 +39,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Check host
+      - name: Check host and install docker
         run: |
           whoami
           ps -xf
+          apt-get upgrade
+          apt install docker
 
       # Workaround: https://github.com/docker/build-push-action/issues/461
       - name: Setup Docker buildx
