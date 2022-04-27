@@ -24,7 +24,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/smbzhang/gcc11-ubuntu16.04:latest
+      image: ghcr.io/smbzhang/ubuntu:latest
       credentials:
         username: ${{ github.repository_owner }}
         password: ${{ secrets.GHCR_TOKEN }}
