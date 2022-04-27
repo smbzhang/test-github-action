@@ -1,4 +1,4 @@
-name: Publish Docker Image
+name: DIND Publish Docker Image
 
 # This workflow uses actions that are not certified by GitHub.
 # They are provided by a third-party and are governed by
@@ -22,7 +22,12 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    #    runs-on: ubuntu-latest
+    container:
+    image: ghcr.io/smbzhang/gcc11-ubuntu16.04:latest
+    credentials:
+     username: ${{ github.repository_owner }}
+     password: ${{ secrets.GHCR_TOKEN }}
     permissions:
       contents: read
       packages: write
