@@ -24,10 +24,10 @@ jobs:
   build:
     #    runs-on: ubuntu-latest
     container:
-    image: ghcr.io/smbzhang/gcc11-ubuntu16.04:latest
-    credentials:
-     username: ${{ github.repository_owner }}
-     password: ${{ secrets.GHCR_TOKEN }}
+      image: ghcr.io/smbzhang/gcc11-ubuntu16.04:latest
+      credentials:
+        username: ${{ github.repository_owner }}
+        password: ${{ secrets.GHCR_TOKEN }}
     permissions:
       contents: read
       packages: write
