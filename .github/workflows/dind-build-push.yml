@@ -42,7 +42,6 @@ jobs:
       - name: Check host
         run: |
           whoami
-          ifconfig
           sudo ps -xf
 
       # Workaround: https://github.com/docker/build-push-action/issues/461
@@ -81,7 +80,7 @@ jobs:
 
       - name: Check host
         run: |
-          ifconfig
+          whoami
           ps -xf
 
       # Build and push Docker image with Buildx (don't push on PR)
