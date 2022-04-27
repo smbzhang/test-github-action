@@ -22,7 +22,7 @@ env:
 
 jobs:
   build:
-    #    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
     container:
       image: ghcr.io/smbzhang/gcc11-ubuntu16.04:latest
       credentials:
