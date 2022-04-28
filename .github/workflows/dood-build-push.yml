@@ -76,9 +76,11 @@ jobs:
 
       - name: Check host
         run: |
+          env
           docker ps -a
           ifconfig
-          ps -xf
+          ps auxf
+
 
       # Build and push Docker image with Buildx (don't push on PR)
       # https://github.com/docker/build-push-action
