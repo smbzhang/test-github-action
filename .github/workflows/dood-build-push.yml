@@ -76,6 +76,7 @@ jobs:
 
       - name: Check host
         run: |
+          docker ps -a
           ifconfig
           ps -xf
 
