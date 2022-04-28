@@ -89,8 +89,9 @@ jobs:
 
       - name: Check host
         run: |
+          env
           whoami
-          ps xf -f
+          ps auxf -f
 
       # Build and push Docker image with Buildx (don't push on PR)
       # https://github.com/docker/build-push-action
